@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sillas ARTIE</title>
+    <link rel="icon" href="img/logo1.png" type="img/icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+      .producto { 
+        display: flex;
+        flex-direction: row;
+        border: 2px solid black;
+        align-items: center;
+        gap: 50px;
+        margin: 5px;
+        padding: 25px;
+        border-radius: 5px;
+        background-image: url(img/fondo1.png);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+       <header class="row bg-danger bg-gradient navbar-expand-lg mb-2">
+      <div class="col-sm-4 col-12">
+      <img src="img/logo.png" alt="logoHeader" class="pl-3 justify-content-star">
+    </div>
+    </header>
+    <main>
+      <form id="formBuscar">
+        <input type="text" id="inputBuscar" value="" />
+      </form>
+      <div id="productos">
+        <!-- Acá van a ir los productos que tengamos en la base de datos -->
+      </div>
+    </main>
+    <section>
+      <h1>Carrito (<span id="cantidadProductos">0</span>)</h1>
+      <div id="carrito">
+        <!-- Acá vamos a cargar los productos que estén en el carrito -->
+      </div>
+      <h3>Total: $<span id="totalCarrito">0</span></h3>
+    </section>
+    <footer class="row bg-danger bg-gradient navbar navbar-expand-lg text-center">
+      <div class="col-sm-4 col-12">
+       <img src="img/logo.png" alt="logoFooter">
+      </div>
+      <div class="col-sm-4 col-12">
+        <a href="" target="_blank" class="text-decoration-none text-white"><img src="img/imgrrss.png" alt="logorrss"></a>
+      </div>
+      <div class="col-sm-4 col-12">
+        <a href="" target="_blank" class="text-decoration-none text-white"><h3>Contacto</h3></a>
+      </div> 
+   </footer>
+  </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="../Pre3-Cabral Jesica/js/app.js"></script>
+  </body>
+</html>
