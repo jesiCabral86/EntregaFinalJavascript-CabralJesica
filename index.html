@@ -6,25 +6,15 @@
     <title>Sillas ARTIE</title>
     <link rel="icon" href="img/logo1.png" type="img/icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <style>
-      .producto { 
-        display: flex;
-        flex-direction: row;
-        border: 2px solid black;
-        align-items: center;
-        gap: 50px;
-        margin: 5px;
-        padding: 25px;
-        border-radius: 5px;
-        background-image: url(img/fondo1.png);
-      }
-    </style>
+    <!-- Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
   </head>
   <body>
     <div class="container">
        <header class="row bg-danger bg-gradient navbar-expand-lg mb-2">
       <div class="col-sm-4 col-12">
-      <img src="img/logo.png" alt="logoHeader" class="pl-5 justify-content-star">
+      <img src="img/logo.png" alt="logoHeader" class="pl-5 text-center">
     </div>
     </header>
     <main>
@@ -32,20 +22,33 @@
       <h1>E-commerce de Sillas de Diseño</h1>
       </div>
       <form id="formBuscar">
-        <input type="text" id="inputBuscar" value="" />
+        <input type="text" id="inputBuscar" value="" placeholder="Buscar Articulo..."/>
       </form>
+      <section class="ocultar">
+        <button class="btn btn-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="img/cart.png"></button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito de Compras</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <h1>Carrito (<span id="cantidadProductos">0</span>)</h1>
+        <div id="carrito">
+          <!-- Productos que selecciono para agregar al carrito -->
+        </div>
+        <h3>Total: $<span id="totalCarrito">0</span></h3>
+        <a href="#" id="botonComprar" class="btn btnComprar oculto">Finalizar Compra</a>
+      </div>
+    </div>
+      </section>
       <div id="productos">
         <!-- Productos que tengo en la base de datos -->
       </div>
     </main>
-    <section>
-      <h1>Carrito (<span id="cantidadProductos">0</span>)</h1>
-      <div id="carrito">
-        <!-- Productos que selecciono para agregar al carrito -->
-      </div>
-      <h3>Total: $<span id="totalCarrito">0</span></h3>
-    </section>
-    <footer class="row bg-danger bg-gradient navbar navbar-expand-lg text-center">
+    <div class="fixed-bottom">
+      <img src="img/wass.png">
+    </div>
+    <footer class="row bg-danger bg-gradient navbar navbar-expand-lg text-center p-1">
       <div class="col-sm-4 col-12">
        <img src="img/logo.png" alt="logoFooter">
       </div>
@@ -58,7 +61,9 @@
    </footer>
   </div>
 </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script src="js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <!-- Toastify -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="js/app.js"></script>
   </body>
 </html>

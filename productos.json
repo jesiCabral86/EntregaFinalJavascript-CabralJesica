@@ -1,0 +1,47 @@
+[{
+    "id": 1 ,
+    "nombre": "Silla Butterfly",
+    "precio" : 6000,
+    "imagen": "pic1.jpg"
+},
+ {
+    "id": 2 ,
+    "nombre": "Silla Ant",
+    "precio" : 5000,
+    "imagen": "pic2.jpg"
+},
+ {
+    "id": 3 ,
+    "nombre": "Silla Cesca",
+    "precio" : 6000,
+    "imagen": "pic3.jpg"
+},
+ {
+   "id": 4 ,
+    "nombre": "Silla Eames",
+    "precio" : 5000,
+    "imagen": "pic4.jpg"
+},
+{
+    "id": 5,
+    "nombre": "Silla Plegable",
+    "precio" : 6000,
+    "imagen": "pic5.jpg"
+},
+ {
+    "id": 6 ,
+    "nombre": "Silla Wiggle",
+    "precio" : 5000,
+    "imagen": "pic6.jpg"
+},
+ {"id": 7 ,
+"nombre": "Silla Hill House",
+"precio" : 6000,
+"imagen": "pic7.jpg"
+},
+ {"id": 8 ,
+"nombre": "Silla Aluminiun",
+"precio" : 5000,
+"imagen": "pic8.jpg"
+}
+]

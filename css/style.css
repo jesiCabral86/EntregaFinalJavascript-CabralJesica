@@ -1,0 +1,38 @@
+#productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: "auto auto";
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    height: auto;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+#formBuscar{
+    text-align: center;
+    padding: 2px;
+}
+.btnAgregar,
+.btnQuitar,
+.btnComprar,
+.btn{
+  color: white;
+  background-color: rgb(231, 44, 44);
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
+  margin: 50px 0;
+  border: 1px solid srgb rgb(231, 44, 44);
+  margin: 10px auto;
+  display: block;
+  text-align: center;
+}
+section{
+    text-align: center;
+}
+.fixed-bottom{
+    text-align: end;
+}

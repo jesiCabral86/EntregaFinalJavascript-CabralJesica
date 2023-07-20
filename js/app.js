@@ -3,22 +3,11 @@
 class BaseDeDatos{
     constructor() {
       this.productos = [];
-      this.agregarRegistro(1, "Silla Butterfly", 6000 , "pic1.jpg");
-      this.agregarRegistro(2, "Silla Ant", 5000, "pic2.jpg");
-      this.agregarRegistro(3, "Silla Cesca", 6000, "pic3.jpg");
-      this.agregarRegistro(4, "Silla Eames", 5000, "pic4.jpg");
-      this.agregarRegistro(5, "Silla Plegable", 6000, "pic5.jpg");
-      this.agregarRegistro(6, "Silla Wiggle", 5000, "pic6.jpg");
-      this.agregarRegistro(7, "Silla Hill House", 6000, "pic7.jpg");
-      this.agregarRegistro(8, "Silla Aluminiun", 5000, "pic8.jpg");
     }
-  
-    agregarRegistro(id, nombre, precio, imagen) {
-      const producto = new Producto(id, nombre, precio, imagen);
-      this.productos.push(producto);
-    }
-  
-    traerRegistros() {
+
+    async traerRegistros(){
+      const response = await fetch("productos.json");
+      this.productos = await response.json();
       return this.productos;
     }
   
@@ -130,8 +119,8 @@ class BaseDeDatos{
   const inputBuscar = document.querySelector("#inputBuscar");
   
   // Llamamos a la función
-  cargarProductos(bd.traerRegistros());
-  
+  bd.traerRegistros().then((productos) => cargarProductos(productos));
+
   // Muestra los registros de la base de datos en nuestro HTML
   function cargarProductos(productos) {
     divProductos.innerHTML = "";
@@ -168,6 +157,5 @@ class BaseDeDatos{
     const palabra = inputBuscar.value;
     cargarProductos(bd.registrosPorNombre(palabra.toLowerCase()));
   });
-  
   // Objeto carrito
   const carrito = new Carrito();
