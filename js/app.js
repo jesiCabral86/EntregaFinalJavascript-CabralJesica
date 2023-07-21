@@ -157,5 +157,6 @@ class BaseDeDatos{
     const palabra = inputBuscar.value;
     cargarProductos(bd.registrosPorNombre(palabra.toLowerCase()));
   });
+
   // Objeto carrito
   const carrito = new Carrito();
